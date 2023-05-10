@@ -15,6 +15,7 @@ jrnl
  [![Homebrew](https://img.shields.io/homebrew/v/jrnl?style=flat-square)](https://formulae.brew.sh/formula/jrnl)
  [![Gitter](https://img.shields.io/gitter/room/jrnl-org/jrnl)](https://gitter.im/jrnl-org/jrnl)
  [![Changelog](https://img.shields.io/badge/changelog-on%20github-green)](https://github.com/jrnl-org/jrnl/blob/develop/CHANGELOG.md)
+ [![jrnl](https://snapcraft.io/jrnl/badge.svg)](https://snapcraft.io/jrnl)
 ====
 
 _To get help, [submit an issue](https://github.com/jrnl-org/jrnl/issues/new/choose) on
