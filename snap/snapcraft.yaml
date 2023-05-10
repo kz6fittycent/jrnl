@@ -1,0 +1,39 @@
+name: jrnl
+adopt-info: jrnl
+summary: Collect your thoughts and notes without leaving the command-line
+description: |
+  jrnl is a simple journal application for the command line.
+  
+  You can use it to easily create, search, and view journal entries. Journals are stored as human-readable plain text, and can also be encrypted using AES encryption.
+  
+license: GPL-3.0
+
+base: core20
+grade: stable
+confinement: classic
+
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+
+apps:
+  jrnl:
+    command: bin/jrnl
+    environment:
+      LC_ALL: C.UTF-8
+parts:
+  jrnl:
+    source: https://github.com/jrnl-org/jrnl
+    source-type: git
+    source-branch: release
+    plugin: python
+    python-packages:
+      - jrnl
+      - poetry
+    
+    build-packages:
+      - glibc-source
+      
+    override-pull: |      
+      snapcraftctl pull
+      snapcraftctl set-version "$(git describe --tags | sed 's/^v//' | cut -d "-" -f1)"
